@@ -3,6 +3,8 @@ package com.sadhkaveragi.springboot.thymeleafdemo.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -41,7 +43,7 @@ public class HelloWorldController {
     }
 
     // controller method to read form data using RequestParam
-    @RequestMapping("/processForm/v3")
+    @PostMapping("/processForm/v3")
     public String processFormV3(@RequestParam("studentName") String name, Model model) {
 
         String message = "Hey My Friend from V3: " + name.toUpperCase();
