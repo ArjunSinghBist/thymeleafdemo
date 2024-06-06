@@ -22,6 +22,8 @@
         <br><br>
         Favorite Programming Language:
                 <input type="radio" th:field="*{favoriteLanguage}"
+
+
                                     th:each="tempLang : ${languages}"
                                     th:value="${tempLang}"
                                     th:text="${tempLang}" />
